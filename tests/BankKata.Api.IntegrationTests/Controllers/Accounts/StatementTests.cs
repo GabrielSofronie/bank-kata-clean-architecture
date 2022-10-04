@@ -25,8 +25,8 @@ public class StatementTests : IClassFixture<TestBase>
         var result = JsonConvert.DeserializeObject<AccountStatementDto>(stringResult);
 
         Assert.Equal(id, result.AccountId);
-        Assert.Equal(2500, result.Statements.ElementAt(0).Balance);
-        Assert.Equal(3000, result.Statements.ElementAt(1).Balance);
-        Assert.Equal(1000, result.Statements.ElementAt(2).Balance);
+        Assert.Equal(500, result.Statements.ElementAt(0).Debit);
+        Assert.Equal(2000, result.Statements.ElementAt(1).Credit);
+        Assert.Equal(1000, result.Statements.ElementAt(2).Credit);
     }
 }
