@@ -16,7 +16,7 @@ public class StatementTests : IClassFixture<TestBase>
     [Fact]
     public async Task ReturnsAllTransactionsInDescendingOrder()
     {
-        var id = Guid.NewGuid();
+        var id = await _testBase.Scenarios().AccountStatement();
         var response = await _testBase.Client().GetAsync($"/api/accounts/{id}/statement");
 
         response.EnsureSuccessStatusCode();
