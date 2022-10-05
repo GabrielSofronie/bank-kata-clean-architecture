@@ -3,7 +3,7 @@
 namespace BankKata.Infrastructure;
 public class AccountRepository : IAccountRepository
 {
-    private IDictionary<Guid, Account> _accounts = new Dictionary<Guid, Account>();
+    private readonly IDictionary<Guid, Account> _accounts = new Dictionary<Guid, Account>();
 
     public Task AddAsync(Account account)
     {
