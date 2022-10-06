@@ -1,6 +1,6 @@
 namespace BankKata.ArchTests;
 
-public static class Namespaces
+internal static class Namespaces
 {
     public const string Api = "BankKata.Api";
     public const string Application = "BankKata.Application";
